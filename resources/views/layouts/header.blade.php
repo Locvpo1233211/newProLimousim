@@ -1,37 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum Example</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-
-<!-- Header -->
-<header class="p-3 bg-dark text-white">
-    <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="{{route('member.category')}}" class="nav-link px-2 text-white">Home</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Topics</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+<style>
+    /* Navbar Sticky */
+    .navbar {
+        position: fixed; /* Cố định navbar ở đầu trang */
+        top: 0; /* Đặt ở đỉnh */
+        width: 100%; /* Full width */
+        z-index: 1000; /* Đảm bảo navbar nằm trên các phần tử khác */
+        padding: 0;
+    }
+    
+    /* Điều chỉnh body để tránh nội dung bị che bởi navbar */
+    body {
+        padding-top: 70px; /* Khoảng cách bằng chiều cao navbar, điều chỉnh nếu cần */
+    }
+    
+    .navbar-brand {
+        margin-left: 1rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .navbar-logo {
+        height: 40px;
+        width: auto;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    .navbar-nav {
+        margin-right: 1rem;
+    }
+    
+    .nav-item {
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link {
+        color: white;
+        padding: 1rem;
+        display: block;
+    }
+    
+    .nav-item.active-page {
+        background-color: #ffc107;
+        border-radius: 10px;
+    }
+    
+    .nav-item.active-page .nav-link {
+        color: black !important;
+    }
+    
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end;
+    }
+    </style>
+    
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand ms-3" href="/">
+            <img src="{{ asset('img/logo/logo.jpg') }}" alt="Logo" class="navbar-logo">
+            Hồ Gươm Travel
+        </a>
+        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto me-3">
+                <li class="nav-item {{ request()->is('/') ? 'active-page' : '' }}">
+                    <a class="nav-link" href="/">Trang Chủ</a>
+                </li>
+                <li class="nav-item {{ request()->routeIs('member.priceList') ? 'active-page' : '' }}">
+                    <a class="nav-link" href="{{ route('member.priceList') }}">Bảng Giá</a>
+                </li>
+                <li class="nav-item {{ request()->routeIs('member.news') ? 'active-page' : '' }}">
+                    <a class="nav-link" href="{{ route('member.news') }}">Tin Tức</a>
+                </li>
+                <li class="nav-item {{ request()->is('about') ? 'active-page' : '' }}">
+                    <a class="nav-link" href="/about">Giới Thiệu</a>
+                </li>
+                <li class="nav-item {{ request()->is('contact') ? 'active-page' : '' }}">
+                    <a class="nav-link" href="/">Liên Hệ</a>
+                </li>
             </ul>
-
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-            </form>
-
-            <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Sign-up</button>
-            </div>
         </div>
-    </div>
-</header>
-@yield('contents')
+    </nav>

@@ -1,107 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum Example</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    @vite('resources/js/app.tsx')
+@extends('layouts.app')
 
+@section('title', 'Trang Chủ - Dịch Vụ Limousine')
 
-</head>
-<body>
-<div id="root">a</div>
+@section('content')
 
-
-<!-- Header -->
-<header class="p-3 bg-dark text-white">
-    <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Topics</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-            </ul>
-
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-            </form>
-
-            <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Sign-up</button>
+     <!-- Banner Carousel -->
+<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-pause="hover">
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active" data-bs-interval="3000">
+            <img src="https://mgmydinh.vn/wp-content/uploads/2019/06/banner-bmw-33-1680x756.jpg" class="d-block w-100" alt="Limousine 1">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Dịch Vụ Cho Thuê Xe Limousine Sang Trọng</h1>
+                <p>Trải nghiệm đẳng cấp với đội xe hiện đại</p>
+                <a href="/services" class="btn btn-primary btn-lg mt-3">Xem Dịch Vụ</a>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Limousine 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Du Lịch Đẳng Cấp</h1>
+                <p>Khám phá mọi nơi với sự thoải mái tối đa</p>
+                <a href="/services" class="btn btn-primary btn-lg mt-3">Xem Dịch Vụ</a>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="https://mgmydinh.vn/wp-content/uploads/2019/06/banner-bmw-01-1680x756.jpg" class="d-block w-100" alt="Limousine 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Xe Cưới Sang Trọng</h1>
+                <p>Ngày đặc biệt thêm hoàn hảo</p>
+                <a href="/services" class="btn btn-primary btn-lg mt-3">Xem Dịch Vụ</a>
             </div>
         </div>
     </div>
-</header>
-<div id = "goot"></div>
-<!-- Main Content -->
-<main class="container mt-5">
-    <div class="row">
-        <div class="col-md-8">
-            <h1 class="mb-4">Forum Topics</h1>
-            <div class="card mb-4">
-                <div class="card-header">
-                    Topics
-                    <a href="#" class="btn btn-sm btn-primary float-right">New Topic</a>
-                </div>
-                <div class="card-body">
-                    <div class="topic-item mb-3">
-                        <h5><a href="#">Sample Topic</a></h5>
-                        <p>by User Name on Jan 1, 2023</p>
-                        <p>This is a sample topic description which might go on for a bit.</p>
-                        <hr>
+    <!-- Nút điều khiển -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+    <!-- Form Đăng Ký Nhận Báo Giá -->
+    <section class="container my-5">
+        <div class="quote-form p-4 rounded">
+            <h2 class="text-center mb-4">Nhận Báo Giá & Tư Vấn Thuê Xe Limousine</h2>
+            <form action="" method="POST" class="row g-3">
+                @csrf
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label for="vehicle" class="form-label">Chọn xe:</label>
+                        <select name="vehicle" id="vehicle" class="form-select" required>
+                            <option value="" disabled selected>Chọn loại xe</option>
+                            <option value="limousine_4_seats">Limousine 4 chỗ</option>
+                            <option value="limousine_7_seats">Limousine 7 chỗ</option>
+                            <option value="limousine_9_seats">Limousine 9 chỗ</option>
+                        </select>
                     </div>
-                    <!-- Add more topics like this -->
+                    <div class="col-md-3">
+                        <label for="pickup_location" class="form-label">Địa điểm đón:</label>
+                        <input type="text" name="pickup_location" id="pickup_location" class="form-control" placeholder="Nhập địa điểm đón" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="itinerary" class="form-label">Hành trình:</label>
+                        <input type="text" name="itinerary" id="itinerary" class="form-control" placeholder="Nhập hành trình" required>
+                    </div>
                 </div>
-            </div>
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label for="date" class="form-label">Ngày đi:</label>
+                        <input type="text" name="date" id="date" class="form-control flatpickr-input" placeholder="Chọn ngày" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="time" class="form-label">Giờ khởi hành:</label>
+                        <div class="custom-time-select">
+                            <input type="text" name="time" id="time" class="form-control time-display" placeholder="Chọn giờ" readonly required>
+                            <select id="time-select" class="time-options">
+                                @for ($h = 0; $h < 24; $h++)
+                                    @for ($m = 0; $m < 60; $m += 30)
+                                        <option value="{{ str_pad($h, 2, '0', STR_PAD_LEFT) }}:{{ str_pad($m, 2, '0', STR_PAD_LEFT) }}">{{ str_pad($h, 2, '0', STR_PAD_LEFT) }}:{{ str_pad($m, 2, '0', STR_PAD_LEFT) }}</option>
+                                    @endfor
+                                @endfor
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="customer_name" class="form-label">Tên khách:</label>
+                        <input type="text" name="customer_name" id="customer_name" class="form-control" placeholder="Nhập họ và tên" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="phone_zalo" class="form-label">Số điện thoại/Zalo:</label>
+                        <input type="tel" name="phone_zalo" id="phone_zalo" class="form-control" placeholder="Nhập số điện thoại" required>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-dark btn-lg" style="width: 200px;">Gửi Ngay</button>
+                </div>
+            </form>
         </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header">
-                    Recent Posts
-                </div>
-                <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li><a href="#">Recent Post Title</a></li>
-                        <!-- Add more posts like this -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-light text-center text-lg-start">
-    <div class="container p-4">
+    <!-- Dịch vụ nổi bật -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Dịch Vụ Của Chúng Tôi</h2>
         <div class="row">
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Forum</h5>
-                <p>Here you can find community discussions and more.</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
-                <ul class="list-unstyled mb-0">
-                    <li><a href="#!" class="text-dark">Home</a></li>
-                    <li><a href="#!" class="text-dark">About</a></li>
-                    <li><a href="#!" class="text-dark">Contact</a></li>
-                </ul>
-            </div>
+            @foreach([
+                ['title' => 'Thuê Xe Đưa Đón', 'desc' => 'Dịch vụ đưa đón sân bay, sự kiện với xe limousine cao cấp.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
+                ['title' => 'Tour Du Lịch', 'desc' => 'Khám phá mọi nơi với xe limousine thoải mái và tiện nghi.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
+                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
+                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'https://mgmydinh.vn/wp-content/uploads/2019/06/banner-bmw-01-1680x756.jpg'],
+                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
+                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'https://mgmydinh.vn/wp-content/uploads/2019/06/banner-bmw-01-1680x756.jpg']
+            ] as $service)
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card">
+                        <img 
+                            src="{{ $service['img'] }}" 
+                            class="card-img-top" 
+                            alt="{{ $service['title'] }}" 
+                            onerror="this.src='{{ asset('images/placeholder.jpg') }}';"
+                        >
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $service['title'] }}</h5>
+                            <p class="card-text">{{ $service['desc'] }}</p>
+                            <a href="/services" class="btn btn-outline-primary">Chi Tiết</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
-    </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2023 Copyright:
-        <a class="text-dark" href="#">YourForum.com</a>
-    </div>
-</footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    // Kiểm tra locale tiếng Việt
+    if (typeof flatpickr.l10ns !== "undefined" && flatpickr.l10ns.vi) {
+        console.log("Locale tiếng Việt đã tải:", flatpickr.l10ns.vi);
+    } else {
+        console.log("Locale tiếng Việt không tải được.");
+    }
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-</html>
+    // Khởi tạo Flatpickr cho Ngày đi
+    flatpickr("#date", {
+        dateFormat: "d/m/Y",
+        minDate: "today",
+        disableMobile: true,
+        locale: flatpickr.l10ns.vi, // Sử dụng object locale tiếng Việt
+        monthSelectorType: "dropdown",
+        yearSelectorType: "dropdown",
+    });
+
+    // Khởi tạo Flatpickr cho Giờ khởi hành
+    // Xử lý dropdown giờ tùy chỉnh
+    const timeDisplay = document.getElementById("time");
+    const timeSelect = document.getElementById("time-select");
+
+    timeDisplay.addEventListener("click", function () {
+        timeSelect.style.display =
+            timeSelect.style.display === "block" ? "none" : "block";
+        timeSelect.style.left = timeDisplay.offsetLeft + "px";
+        timeSelect.style.top =
+            timeDisplay.offsetTop + timeDisplay.offsetHeight + "px";
+    });
+
+    timeSelect.addEventListener("change", function () {
+        timeDisplay.value = timeSelect.value;
+        timeSelect.style.display = "none";
+    });
+
+    // Ẩn dropdown khi click ra ngoài
+    document.addEventListener("click", function (e) {
+        if (!timeSelect.contains(e.target) && e.target !== timeDisplay) {
+            timeSelect.style.display = "none";
+        }
+    });
+});
+console.log(flatpickr.l10ns.vi);
+        </script>
+    </section>
+@endsection

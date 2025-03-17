@@ -5,19 +5,24 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\test;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/test', [test::class,'views'])->name('index');
 
-Route::group(['prefix'=> 'thanh-vien', 'as'=>'member.','namespace'=> 'Web'], function () {
-    Route::get('/category.html', [categoryController::class,'views'])->name('category');
-    Route::post('/store-category', [categoryController::class,'store'])->name('storeCategory');
-    Route::get('/edit-form-category/{id}', [categoryController::class,'editForm'])->name('editFormCategory');
-    Route::put('/update/category/{id}', [categoryController::class,'update'])->name('updateCategory');
-    Route::delete('/delete/category/{id}', [categoryController::class,'destroy'])->name('deleteCategory');
+
+Route::group(['as'=>'member.','namespace'=> 'Web'], function () {
+    Route::get('/', function(){return view('welcome');})->name('home'  );
+    Route::get('/price-list', function(){return view('web.price');})->name('priceList');
+    Route::get('/news', function(){return view('web.news');})->name('news' );
+    Route::get('/about',function(){return view('web.about');})->name('about' );
+
+    
+
 });
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
