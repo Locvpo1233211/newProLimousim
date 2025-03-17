@@ -67,7 +67,8 @@
     }
 
     .carousel-caption {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-shadow: 2px 2px 4px rgba(118, 238, 63, 0.623); /* Bóng đen mờ */
+
         position: absolute;
         top: 50%;
         left: 50%; /* Căn giữa theo chiều ngang */
@@ -80,7 +81,7 @@
 
     .carousel-caption h1 {
         color: #ffc107 !important;
-        font-size: 2.5rem;
+        font-size: 4rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
     }
@@ -244,6 +245,104 @@
             background-color: #ffc107 !important;
             color: #1a1a1a !important;
         }
+        /* Review Section */
+.review-card {
+    background-color: #2a2a2a;
+    border: 1px solid #ffc107;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.review-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #ffc107;
+}
+
+.review-name {
+    color: #ffc107;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.review-rating {
+    color: #ffc107;
+    font-size: 1rem;
+}
+
+.review-rating .bi-star-fill,
+.review-rating .bi-star {
+    margin-right: 5px;
+}
+
+.review-comment {
+    color: #ffd700;
+    font-style: italic;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsive Adjustments cho Review Section */
+@media (max-width: 992px) { /* Tablet */
+    .review-card {
+        padding: 15px;
+    }
+
+    .review-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .review-name {
+        font-size: 1.1rem;
+    }
+
+    .review-comment {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile lớn */
+    .review-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .review-name {
+        font-size: 1rem;
+    }
+
+    .review-comment {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) { /* Mobile nhỏ */
+    .review-card {
+        padding: 10px;
+    }
+
+    .review-card img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .review-name {
+        font-size: 0.9rem;
+    }
+
+    .review-comment {
+        font-size: 0.85rem;
+    }
+}
 
         /* Flatpickr */
         .flatpickr-calendar {

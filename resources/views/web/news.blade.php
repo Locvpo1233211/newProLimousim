@@ -349,7 +349,7 @@ body {
                 </div>
             </div>
 
-            <!-- Bài viết 13 -->
+            {{-- <!-- Bài viết 13 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
                     <img src="https://via.placeholder.com/300x200?text=Bài+13" alt="Bài 13" class="news-card-image" loading="lazy">
@@ -426,14 +426,14 @@ body {
                     <a href="#" class="news-btn btn">Xem Thêm</a>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <!-- Footer -->
         <div class="news-footer text-center mt-5 p-3">
             <h4 class="news-footer-title mb-3"><i class="bi bi-telephone-fill me-2"></i> Liên Hệ Với Chúng Tôi</h4>
             <p class="news-footer-text mb-1"><i class="bi bi-telephone-fill me-2"></i> Hotline: 0822298989 (Zalo, WhatsApp)</p>
             <p class="news-footer-text mb-1"><i class="bi bi-envelope-fill me-2"></i> Email:  long27031999@gmail.com</p>
-            <p class="news-footer-text mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Địa chỉ:76 P. Hàng Trống, Hàng Trống, Hoàn Kiếm, Hà Nội</p>
+            <p class="news-footer-text mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Địa chỉ:98 Đ. Nguyễn Chí Thanh, Láng Thượng, Đống Đa, Hà Nội</p>
             <a href="tel:+84902035595" class="news-btn btn mt-3">Đặt Xe Ngay</a>
         </div>
     </section>

@@ -391,7 +391,7 @@ body {
             <img src="{{ asset('img/dcar_exterior_side.jpg') }}" alt="DCar Limousine Bên Ngoài" class="contact-image mb-4" loading="lazy">
             <p class="contact-text mb-2"><i class="bi bi-telephone-fill me-2"></i> Hotline: <a href="tel:0822298989" class="contact-link">0822 298 989</a></p>
             <p class="contact-text mb-2"><i class="bi bi-envelope-fill me-2"></i> Email: <a href="mailto:long27031999@gmail.com" class="contact-link">long27031999@gmail.com</a></p>
-            <p class="contact-text mb-2"><i class="bi bi-geo-alt-fill me-2"></i> Địa chỉ: 76 P. Hàng Trống, Hàng Trống, Hoàn Kiếm, Hà Nội</p>
+            <p class="contact-text mb-2"><i class="bi bi-geo-alt-fill me-2"></i> Địa chỉ: 98 Đ. Nguyễn Chí Thanh, Láng Thượng, Đống Đa, Hà Nội</p>
             <a href="tel:0822298989" class="contact-btn btn mt-3">Đặt Xe Ngay</a>
         </div>
     </section>

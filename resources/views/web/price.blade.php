@@ -7,8 +7,8 @@
     <section class="container my-5 py-3">
         <!-- Header -->
         <div class="price-header text-center mb-5">
-            <h1 class="text-warning display-5 fw-bold mb-2">Bảng Giá Thuê Xe Limousine 2025</h1>
-            <h2 class="text-warning fs-4 mb-3">Trải nghiệm hành trình sang trọng cùng Asia Limousine</h2>
+            <h1 class="text-warning display-5 fw-bold mb-2">Bảng Giá Thuê Xe LIMOUSINE 2025</h1>
+            <h2 class="text-warning fs-4 mb-3">Trải nghiệm hành trình sang trọng cùng Hồ Gươm Travel</h2>
             <p class="text-warning mb-4">Dịch vụ xe limousine cao cấp tại Hà Nội – Đặt ngay để nhận ưu đãi lên đến 15%!</p>
             <a href="tel:+84902035595" class="btn btn-warning" style="background-color: #FFC107; color: #1A1A1A; padding: 8px 20px;">Liên Hệ Ngay</a>
         </div>
@@ -64,7 +64,12 @@
                                     <td>Đón/trả tận nơi, 1 chiều</td>
                                 </tr>
                                 <tr>
-                                    <td>DCar Limousine 16-19 chỗ</td>
+                                    <td>dcar limousine 11 chỗ</td>
+                                    <td>Liên Hệ</td>
+                                    <td>Đón/trả tận nơi, 1 chiều</td>
+                                </tr>
+                                <tr>
+                                    <td>Dcar limousine 18 chỗ</td>
                                     <td>Liên Hệ</td>
                                     <td>Đón/trả tận nơi, 1 chiều</td>
                                 </tr>
@@ -93,12 +98,17 @@
                                 <tr>
                                     <td>DCar Limousine 9 chỗ</td>
                                     <td>Liên Hệ</td>
-                                    <td>8 giờ/ngày, nội thành</td>
+                                    <td>Đón/trả tận nơi, 1 chiều</td>
                                 </tr>
                                 <tr>
-                                    <td>DCar Limousine 16-19 chỗ</td>
+                                    <td>dcar limousine 11 chỗ</td>
                                     <td>Liên Hệ</td>
-                                    <td>8 giờ/ngày, nội thành</td>
+                                    <td>Đón/trả tận nơi, 1 chiều</td>
+                                </tr>
+                                <tr>
+                                    <td>Dcar limousine 18 chỗ</td>
+                                    <td>Liên Hệ</td>
+                                    <td>Đón/trả tận nơi, 1 chiều</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -116,36 +126,68 @@
                         <table class="table table-dark table-bordered fixed-table">
                             <thead>
                                 <tr>
-                                    <th class="text-warning">Điểm Đến</th>
                                     <th class="text-warning">Loại Xe</th>
-                                    <th class="text-warning">Giá (VNĐ)</th>
+                                    <th class="text-warning">Giá (VNĐ/Ngày)</th>
                                     <th class="text-warning">Ghi Chú</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Hạ Long</td>
                                     <td>DCar Limousine 9 chỗ</td>
                                     <td>Liên Hệ</td>
-                                    <td>153 km, 1 ngày</td>
+                                    <td>1 và nhiều ngày</td>
                                 </tr>
                                 <tr>
-                                    <td>Hạ Long</td>
-                                    <td>DCar Limousine 16-19 chỗ</td>
+                                    <td>dcar limousine 11 chỗ</td>
                                     <td>Liên Hệ</td>
-                                    <td>153 km, 1 ngày</td>
+                                    <td>1 và nhiều ngày</td>
                                 </tr>
                                 <tr>
-                                    <td>Tràng An/Bái Đính</td>
+                                    <td>Dcar limousine 18 chỗ</td>
+                                    <td>Liên Hệ</td>
+                                    <td>1 và nhiều ngày</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- cuoi-->
+                <div class="price-card mb-4">
+                    <div class="card-header d-flex align-items-center">
+                        <i class="bi bi-compass-fill text-warning me-2"></i>
+                        <h3 class="text-warning mb-0">Xe Cưới</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-warning mb-3">Đám Cưới Cùng Hồ Gươm Travel.</p>
+                        <table class="table table-dark table-bordered fixed-table">
+                            <thead>
+                                <tr>
+                                    <th class="text-warning">Loại Xe</th>
+                                    <th class="text-warning">Giá (VNĐ/Ngày)</th>
+                                    <th class="text-warning">Ghi Chú</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
                                     <td>DCar Limousine 9 chỗ</td>
                                     <td>Liên Hệ</td>
-                                    <td>100 km, 1 ngày</td>
+                                    <td>1 và nhiều ngày</td>
                                 </tr>
                                 <tr>
-                                    <td>Tràng An/Bái Đính</td>
-                                    <td>DCar Limousine 16-19 chỗ</td>
+                                    <td>dcar limousine 11 chỗ</td>
                                     <td>Liên Hệ</td>
-                                    <td>100 km, 1 ngày</td>
+                                    <td>1 và nhiều ngày</td>
+                                </tr>
+                                <tr>
+                                    <td>Dcar limousine 18 chỗ</td>
+                                    <td>Liên Hệ</td>
+                                    <td>1 và nhiều ngày</td>
+                                </tr>
+                                <tr>
+                                    <td>Rolls Royce Ghost II</td>
+                                    <td>Liên Hệ</td>
+                                    <td>1 và nhiều ngày</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -157,11 +199,11 @@
             <div class="col-md-4">
                 <div class="info-card p-3 mb-4">
                     <h4 class="text-warning mb-3"><i class="bi bi-info-circle-fill me-2"></i> Lưu Ý</h4>
-                    <p class="text-warning mb-2">Giá bao gồm phí xăng, cầu đường, nước uống. Không áp dụng dịp lễ. Mùa cao điểm: +20-30%, mùa thấp điểm: -10-20%. Liên hệ để xác nhận.</p>
+                    <p class="text-warning mb-2">Giá bao gồm phí xăng, cầu đường, nước uống. Không áp dụng dịp lễ. Mùa cao điểm: +20-30%. Liên hệ để xác nhận.</p>
                     <h4 class="text-warning mt-4 mb-2"><i class="bi bi-telephone-fill me-2"></i> Liên Hệ</h4>
                     <p class="text-warning mb-1"><i class="bi bi-telephone-fill me-2"></i> Hotline: 0822298989 (Zalo, WhatsApp)</p>
                     <p class="text-warning mb-1"><i class="bi bi-envelope-fill me-2"></i> Email: long27031999@gmail.com</p>
-                    <p class="text-warning mb-1"><i class="bi bi-geo-alt-fill me-2"></i> 76 P. Hàng Trống, Hàng Trống, Hoàn Kiếm, Hà Nội</p>
+                    <p class="text-warning mb-1"><i class="bi bi-geo-alt-fill me-2"></i> 98 Đ. Nguyễn Chí Thanh, Láng Thượng, Đống Đa, Hà Nội</p>
                     <a href="tel:+84902035595" class="btn btn-warning mt-3" style="background-color: #FFC107; color: #1A1A1A; padding: 8px 20px; width: 100%;">Đặt Xe Ngay</a>
                 </div>
 

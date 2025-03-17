@@ -9,8 +9,8 @@
     <div class="carousel-inner">
         <!-- Slide 1 -->
         <div class="carousel-item active" data-bs-interval="3000">
-            <img src="https://mgmydinh.vn/wp-content/uploads/2019/06/banner-bmw-33-1680x756.jpg" class="d-block w-100" alt="Limousine 1">
-            <div class="carousel-caption d-none d-md-block">
+            <img src="{{ asset('img/logo/logo.jpg') }}" class="d-block w-100" alt="Limousine 1">
+            <div class="carousel-caption d-none d-md-block" class="shadow-text">
                 <h1>Dịch Vụ Cho Thuê Xe Limousine Sang Trọng</h1>
                 <p>Trải nghiệm đẳng cấp với đội xe hiện đại</p>
                 <a href="/services" class="btn btn-primary btn-lg mt-3">Xem Dịch Vụ</a>
@@ -18,8 +18,8 @@
         </div>
         <!-- Slide 2 -->
         <div class="carousel-item" data-bs-interval="3000">
-            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Limousine 2">
-            <div class="carousel-caption d-none d-md-block">
+            <img src="{{ asset('img/banner2.jpg') }}" class="d-block w-100" alt="Limousine 2">
+            <div class="carousel-caption d-none d-md-block" class="shadow-text">
                 <h1>Du Lịch Đẳng Cấp</h1>
                 <p>Khám phá mọi nơi với sự thoải mái tối đa</p>
                 <a href="/services" class="btn btn-primary btn-lg mt-3">Xem Dịch Vụ</a>
@@ -27,8 +27,8 @@
         </div>
         <!-- Slide 3 -->
         <div class="carousel-item" data-bs-interval="3000">
-            <img src="https://mgmydinh.vn/wp-content/uploads/2019/06/banner-bmw-01-1680x756.jpg" class="d-block w-100" alt="Limousine 3">
-            <div class="carousel-caption d-none d-md-block">
+            <img src="{{ asset('img/banner1.jpg') }}" class="d-block w-100" alt="Limousine 3">
+            <div class="carousel-caption d-none d-md-block" class="shadow-text">
                 <h1>Xe Cưới Sang Trọng</h1>
                 <p>Ngày đặc biệt thêm hoàn hảo</p>
                 <a href="/services" class="btn btn-primary btn-lg mt-3">Xem Dịch Vụ</a>
@@ -57,9 +57,10 @@
                         <label for="vehicle" class="form-label">Chọn xe:</label>
                         <select name="vehicle" id="vehicle" class="form-select" required>
                             <option value="" disabled selected>Chọn loại xe</option>
-                            <option value="limousine_4_seats">Limousine 4 chỗ</option>
-                            <option value="limousine_7_seats">Limousine 7 chỗ</option>
-                            <option value="limousine_9_seats">Limousine 9 chỗ</option>
+                            <option value="limousine_4_seats">Dcar Limousine 9 chỗ</option>
+                            <option value="limousine_7_seats">Dcar Limousine 11 chỗ</option>
+                            <option value="limousine_9_seats">Dcar Limousine 18 chỗ</option>
+                            <option value="limousine_9_seats">Rolls Royce Ghost Series II</option>                            
                         </select>
                     </div>
                     <div class="col-md-3">
@@ -113,10 +114,7 @@
                 ['title' => 'Thuê Xe Đưa Đón', 'desc' => 'Dịch vụ đưa đón sân bay, sự kiện với xe limousine cao cấp.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
                 ['title' => 'Tour Du Lịch', 'desc' => 'Khám phá mọi nơi với xe limousine thoải mái và tiện nghi.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
                 ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
-                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'https://mgmydinh.vn/wp-content/uploads/2019/06/banner-bmw-01-1680x756.jpg'],
-                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
-                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'https://mgmydinh.vn/wp-content/uploads/2019/06/banner-bmw-01-1680x756.jpg']
-            ] as $service)
+                          ] as $service)
                 <div class="col-md-4 mb-4">
                     <div class="card service-card">
                         <img 
@@ -134,6 +132,34 @@
                 </div>
             @endforeach
         </div>
+        <!-- Đánh Giá Của Khách Hàng -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Đánh Giá Của Khách Hàng</h2>
+    <div class="row justify-content-center">
+        @foreach([
+            ['name' => 'Phan Vĩnh Thanh', 'rating' => 5, 'comment' => 'Dịch vụ rất chuyên nghiệp, xe sạch sẽ và tài xế thân thiện. Sẽ tiếp tục ủng hộ!', 'avatar' => 'https://lumiere-a.akamaihd.net/v1/images/a_avatarpandorapedia_jakesully_16x9_1098_02_b13c4171.jpeg?region=340%2C0%2C1081%2C1081'],
+            ['name' => 'Nguyễn Thảo My', 'rating' => 4, 'comment' => 'Xe đẹp, thoải mái, nhưng giá hơi cao so với kỳ vọng. Dù sao vẫn đáng thử.', 'avatar' => 'https://lumiere-a.akamaihd.net/v1/images/a_avatarpandorapedia_jakesully_16x9_1098_02_b13c4171.jpeg?region=340%2C0%2C1081%2C1081'],
+            ['name' => 'Nguyễn Minh Chung', 'rating' => 5, 'comment' => 'Trải nghiệm tuyệt vời, đúng giờ và dịch vụ chăm sóc khách hàng tốt.', 'avatar' => 'https://lumiere-a.akamaihd.net/v1/images/a_avatarpandorapedia_jakesully_16x9_1098_02_b13c4171.jpeg?region=340%2C0%2C1081%2C1081']
+        ] as $review)
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="review-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="{{ $review['avatar'] }}" class="rounded-circle me-3" alt="{{ $review['name'] }}">
+                        <div>
+                            <h5 class="review-name">{{ $review['name'] }}</h5>
+                            <div class="review-rating">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <i class="bi {{ $i <= $review['rating'] ? 'bi-star-fill' : 'bi-star' }}"></i>
+                                @endfor
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-comment">"{{ $review['comment'] }}"</p>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</section>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
     // Kiểm tra locale tiếng Việt

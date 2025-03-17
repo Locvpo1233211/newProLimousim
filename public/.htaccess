@@ -5,17 +5,17 @@
 
     RewriteEngine On
 
-    # Handle Authorization Header
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
-    # Redirect Trailing Slashes If Not A Folder...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$
-    RewriteRule ^ %1 [L,R=301]
-
-    # Send Requests To Front Controller...
+    # Xử lý các yêu cầu không phải file hoặc thư mục thực tế
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    # Chuyển hướng Trailing Slash (tùy chọn)
+    RewriteCond %{REQUEST_URI} /+$
+    RewriteRule ^(.*)/+$ $1 [R=301,L]
+
+    # Xử lý lỗi 403/404/500 (tùy chọn)
+    ErrorDocument 403 /index.php
+    ErrorDocument 404 /index.php
+    ErrorDocument 500 /index.php
 </IfModule>
