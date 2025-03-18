@@ -8,6 +8,6 @@ class test extends Controller
 {
     //
     public function views(Request $request){
-        return view("member.category");
+        return view("dashboard");
     }
 }
