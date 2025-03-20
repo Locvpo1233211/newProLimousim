@@ -310,7 +310,7 @@ body {
                 </div>
             </div>
 
-            <!-- Bài viết 10 -->
+            <!-- Bài viết 10
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
                     <img src="https://via.placeholder.com/300x200?text=Bài+10" alt="Bài 10" class="news-card-image" loading="lazy">
@@ -323,7 +323,7 @@ body {
                 </div>
             </div>
 
-            <!-- Bài viết 11 -->
+            Bài viết 11
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
                     <img src="https://via.placeholder.com/300x200?text=Bài+11" alt="Bài 11" class="news-card-image" loading="lazy">
@@ -336,7 +336,7 @@ body {
                 </div>
             </div>
 
-            <!-- Bài viết 12 -->
+            Bài viết 12
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
                     <img src="https://via.placeholder.com/300x200?text=Bài+12" alt="Bài 12" class="news-card-image" loading="lazy">
@@ -347,7 +347,7 @@ body {
                     <p class="news-excerpt mb-3">Tham quan Hà Nội với xe limousine trong 8 giờ, giá từ 2.000.000 VNĐ/ngày. Ghé thăm Hồ Gươm, Văn Miếu, và Lăng Bác với sự thoải mái tối đa!</p>
                     <a href="#" class="news-btn btn">Xem Thêm</a>
                 </div>
-            </div>
+            </div> -->
 
             {{-- <!-- Bài viết 13 -->
             <div class="news-card news-card--hidden">

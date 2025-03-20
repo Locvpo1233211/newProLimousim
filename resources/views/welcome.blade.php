@@ -111,14 +111,14 @@
         <h2 class="text-center mb-4">Dịch Vụ Của Chúng Tôi</h2>
         <div class="row">
             @foreach([
-                ['title' => 'Thuê Xe Đưa Đón', 'desc' => 'Dịch vụ đưa đón sân bay, sự kiện với xe limousine cao cấp.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
-                ['title' => 'Tour Du Lịch', 'desc' => 'Khám phá mọi nơi với xe limousine thoải mái và tiện nghi.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
-                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
+                ['title' => 'Thuê Xe Đưa Đón', 'desc' => 'Dịch vụ đưa đón sân bay, sự kiện với xe limousine cao cấp.', 'img' => 'img/Xe-limousine-Van-Don-Xanh-01.jpg'],
+                ['title' => 'Tour Du Lịch', 'desc' => 'Khám phá mọi nơi với xe limousine thoải mái và tiện nghi.', 'img' => 'img/Xe-Limousine.jpg'],
+                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'img/dich-vu-thue-xe-cuoi-tphcm-chuyen-nghiep.jpg'],
                           ] as $service)
                 <div class="col-md-4 mb-4">
                     <div class="card service-card">
                         <img 
-                            src="{{ $service['img'] }}" 
+                            src="{{asset( $service['img']) }}" 
                             class="card-img-top" 
                             alt="{{ $service['title'] }}" 
                             onerror="this.src='{{ asset('images/placeholder.jpg') }}';"
