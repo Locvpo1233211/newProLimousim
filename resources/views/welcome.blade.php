@@ -50,65 +50,41 @@
     <section class="container my-5">
         <div class="quote-form p-4 rounded">
             <h2 class="text-center mb-4">Nhận Báo Giá & Tư Vấn Thuê Xe Limousine</h2>
-            
-            @if(session('success'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{ session('success') }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
-
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul class="mb-0">
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
-            <form action="{{ route('quote.store') }}" method="POST" class="row g-3">
+            <form action="" method="POST" class="row g-3">
                 @csrf
                 <div class="row mb-3">
                     <div class="col-md-3">
                         <label for="vehicle" class="form-label">Chọn xe:</label>
-                        <select name="vehicle" id="vehicle" class="form-select @error('vehicle') is-invalid @enderror" required>
+                        <select name="vehicle" id="vehicle" class="form-select" required>
                             <option value="" disabled selected>Chọn loại xe</option>
-                            <option value="Dcar Limousine 9 chỗ" {{ old('vehicle') == 'Dcar Limousine 9 chỗ' ? 'selected' : '' }}>Dcar Limousine 9 chỗ</option>
-                            <option value="Dcar Limousine 11 chỗ" {{ old('vehicle') == 'Dcar Limousine 11 chỗ' ? 'selected' : '' }}>Dcar Limousine 11 chỗ</option>
-                            <option value="Dcar Limousine 18 chỗ" {{ old('vehicle') == 'Dcar Limousine 18 chỗ' ? 'selected' : '' }}>Dcar Limousine 18 chỗ</option>
-                            <option value="Rolls Royce Ghost Series II" {{ old('vehicle') == 'Rolls Royce Ghost Series II' ? 'selected' : '' }}>Rolls Royce Ghost Series II</option>
+                            <option value="limousine_4_seats">Dcar Limousine 9 chỗ</option>
+                            <option value="limousine_7_seats">Dcar Limousine 11 chỗ</option>
+                            <option value="limousine_9_seats">Dcar Limousine 18 chỗ</option>
+                            <option value="limousine_9_seats">Rolls Royce Ghost Series II</option>                            
                         </select>
                     </div>
                     <div class="col-md-3">
                         <label for="pickup_location" class="form-label">Địa điểm đón:</label>
-                        <input type="text" name="pickup_location" id="pickup_location" class="form-control @error('pickup_location') is-invalid @enderror" 
-                               value="{{ old('pickup_location') }}" placeholder="Nhập địa điểm đón" required>
+                        <input type="text" name="pickup_location" id="pickup_location" class="form-control" placeholder="Nhập địa điểm đón" required>
                     </div>
                     <div class="col-md-6">
                         <label for="itinerary" class="form-label">Hành trình:</label>
-                        <input type="text" name="itinerary" id="itinerary" class="form-control @error('itinerary') is-invalid @enderror" 
-                               value="{{ old('itinerary') }}" placeholder="Nhập hành trình" required>
+                        <input type="text" name="itinerary" id="itinerary" class="form-control" placeholder="Nhập hành trình" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-3">
                         <label for="date" class="form-label">Ngày đi:</label>
-                        <input type="text" name="date" id="date" class="form-control flatpickr-input @error('date') is-invalid @enderror" 
-                               value="{{ old('date') }}" placeholder="Chọn ngày" required>
+                        <input type="text" name="date" id="date" class="form-control flatpickr-input" placeholder="Chọn ngày" required>
                     </div>
                     <div class="col-md-3">
                         <label for="time" class="form-label">Giờ khởi hành:</label>
                         <div class="custom-time-select">
-                            <input type="text" name="time" id="time" class="form-control time-display @error('time') is-invalid @enderror" 
-                                   value="{{ old('time') }}" placeholder="Chọn giờ" readonly required>
+                            <input type="text" name="time" id="time" class="form-control time-display" placeholder="Chọn giờ" readonly required>
                             <select id="time-select" class="time-options">
                                 @for ($h = 0; $h < 24; $h++)
                                     @for ($m = 0; $m < 60; $m += 30)
-                                        <option value="{{ str_pad($h, 2, '0', STR_PAD_LEFT) }}:{{ str_pad($m, 2, '0', STR_PAD_LEFT) }}">
-                                            {{ str_pad($h, 2, '0', STR_PAD_LEFT) }}:{{ str_pad($m, 2, '0', STR_PAD_LEFT) }}
-                                        </option>
+                                        <option value="{{ str_pad($h, 2, '0', STR_PAD_LEFT) }}:{{ str_pad($m, 2, '0', STR_PAD_LEFT) }}">{{ str_pad($h, 2, '0', STR_PAD_LEFT) }}:{{ str_pad($m, 2, '0', STR_PAD_LEFT) }}</option>
                                     @endfor
                                 @endfor
                             </select>
@@ -116,13 +92,11 @@
                     </div>
                     <div class="col-md-3">
                         <label for="customer_name" class="form-label">Tên khách:</label>
-                        <input type="text" name="customer_name" id="customer_name" class="form-control @error('customer_name') is-invalid @enderror" 
-                               value="{{ old('customer_name') }}" placeholder="Nhập họ và tên" required>
+                        <input type="text" name="customer_name" id="customer_name" class="form-control" placeholder="Nhập họ và tên" required>
                     </div>
                     <div class="col-md-3">
                         <label for="phone_zalo" class="form-label">Số điện thoại/Zalo:</label>
-                        <input type="tel" name="phone_zalo" id="phone_zalo" class="form-control @error('phone_zalo') is-invalid @enderror" 
-                               value="{{ old('phone_zalo') }}" placeholder="Nhập số điện thoại" required>
+                        <input type="tel" name="phone_zalo" id="phone_zalo" class="form-control" placeholder="Nhập số điện thoại" required>
                     </div>
                 </div>
                 <div class="text-center">
@@ -137,14 +111,14 @@
         <h2 class="text-center mb-4">Dịch Vụ Của Chúng Tôi</h2>
         <div class="row">
             @foreach([
-                ['title' => 'Thuê Xe Đưa Đón', 'desc' => 'Dịch vụ đưa đón sân bay, sự kiện với xe limousine cao cấp.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
-                ['title' => 'Tour Du Lịch', 'desc' => 'Khám phá mọi nơi với xe limousine thoải mái và tiện nghi.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
-                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'],
+                ['title' => 'Thuê Xe Đưa Đón', 'desc' => 'Dịch vụ đưa đón sân bay, sự kiện với xe limousine cao cấp.', 'img' => 'img/Xe-limousine-Van-Don-Xanh-01.jpg'],
+                ['title' => 'Tour Du Lịch', 'desc' => 'Khám phá mọi nơi với xe limousine thoải mái và tiện nghi.', 'img' => 'img/Xe-Limousine.jpg'],
+                ['title' => 'Xe Cưới', 'desc' => 'Ngày cưới thêm hoàn hảo với xe limousine sang trọng.', 'img' => 'img/dich-vu-thue-xe-cuoi-tphcm-chuyen-nghiep.jpg'],
                           ] as $service)
                 <div class="col-md-4 mb-4">
                     <div class="card service-card">
                         <img 
-                            src="{{ $service['img'] }}" 
+                            src="{{asset( $service['img']) }}" 
                             class="card-img-top" 
                             alt="{{ $service['title'] }}" 
                             onerror="this.src='{{ asset('images/placeholder.jpg') }}';"
@@ -163,14 +137,15 @@
     <h2 class="text-center mb-4">Đánh Giá Của Khách Hàng</h2>
     <div class="row justify-content-center">
         @foreach([
-            ['name' => 'Phan Vĩnh Thanh', 'rating' => 5, 'comment' => 'Dịch vụ rất chuyên nghiệp, xe sạch sẽ và tài xế thân thiện. Sẽ tiếp tục ủng hộ!', 'avatar' => 'https://lumiere-a.akamaihd.net/v1/images/a_avatarpandorapedia_jakesully_16x9_1098_02_b13c4171.jpeg?region=340%2C0%2C1081%2C1081'],
-            ['name' => 'Nguyễn Thảo My', 'rating' => 4, 'comment' => 'Xe đẹp, thoải mái, nhưng giá hơi cao so với kỳ vọng. Dù sao vẫn đáng thử.', 'avatar' => 'https://lumiere-a.akamaihd.net/v1/images/a_avatarpandorapedia_jakesully_16x9_1098_02_b13c4171.jpeg?region=340%2C0%2C1081%2C1081'],
-            ['name' => 'Nguyễn Minh Chung', 'rating' => 5, 'comment' => 'Trải nghiệm tuyệt vời, đúng giờ và dịch vụ chăm sóc khách hàng tốt.', 'avatar' => 'https://lumiere-a.akamaihd.net/v1/images/a_avatarpandorapedia_jakesully_16x9_1098_02_b13c4171.jpeg?region=340%2C0%2C1081%2C1081']
+            ['name' => 'Phan Vĩnh Thanh', 'rating' => 5, 'comment' => 'Dịch vụ rất chuyên nghiệp, xe sạch sẽ và tài xế thân thiện. Sẽ tiếp tục ủng hộ!', 'avatar' => 'img/nam.jpg'],
+            ['name' => 'Nguyễn Thảo My', 'rating' => 4, 'comment' => 'Xe đẹp, thoải mái, nhưng giá hơi cao so với kỳ vọng. Dù sao vẫn đáng thử.', 'avatar' => 'img/nguyen van.jpg'],
+            ['name' => 'Nguyễn Minh Chung', 'rating' => 5, 'comment' => 'Trải nghiệm tuyệt vời, đúng giờ và dịch vụ chăm sóc khách hàng tốt.', 'avatar' => 'img/anhtrai.jpg']
         ] as $review)
             <div class="col-md-4 col-sm-6 mb-4">
                 <div class="review-card">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="{{ $review['avatar'] }}" class="rounded-circle me-3" alt="{{ $review['name'] }}">
+                        
+                        <img src="{{asset( $review['avatar']) }}" class="rounded-circle me-3" alt="{{ $review['name'] }}">
                         <div>
                             <h5 class="review-name">{{ $review['name'] }}</h5>
                             <div class="review-rating">

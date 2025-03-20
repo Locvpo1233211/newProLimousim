@@ -196,7 +196,7 @@ body {
             <!-- Bài viết 1 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Bài 1" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/1.webp') }}" alt="Bài 1" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">5 Mẹo Chuẩn Bị Hành Trang Cho Chuyến Đi Limousine</h2>
@@ -209,7 +209,7 @@ body {
             <!-- Bài viết 2 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://mgmydinh.vn/wp-content/uploads/2019/06/banner-bmw-01-1680x756.jpg" alt="Bài 2" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/2.jpg') }}" alt="Bài 2" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Xu Hướng Xe Limousine 2025: Công Nghệ Đỉnh Cao</h2>
@@ -222,7 +222,7 @@ body {
             <!-- Bài viết 3 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://mgmydinh.vn/wp-content/uploads/2019/06/banner-bmw-01-1680x756.jpg" alt="Bài 3" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/3.jpg') }}" alt="Bài 3" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Dịch Vụ Đón Tiễn Sân Bay Nội Bài Mới</h2>
@@ -235,7 +235,7 @@ body {
             <!-- Bài viết 4 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Bài 4" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/4.jpg') }}" alt="Bài 4" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Hành Trình Hà Nội - Hạ Long Bằng Limousine</h2>
@@ -248,7 +248,7 @@ body {
             <!-- Bài viết 5 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Bài 5" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/5.jpg') }}" alt="Bài 5" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Cách Đặt Xe Limousine Giá Rẻ Nhất</h2>
@@ -261,7 +261,7 @@ body {
             <!-- Bài viết 6 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Bài 6" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/6.jpg') }}" alt="Bài 6" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Top 3 Địa Điểm Gần Hà Nội Đi Bằng Limousine</h2>
@@ -274,7 +274,7 @@ body {
             <!-- Bài viết 7 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Bài 7" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/7.jpg') }}" alt="Bài 7" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Lý Do Nên Chọn Limousine Cho Chuyến Đi Gia Đình</h2>
@@ -287,7 +287,7 @@ body {
             <!-- Bài viết 8 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://via.placeholder.com/300x200?text=Bài+8" alt="Bài 8" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/8.jpg') }}" alt="Bài 8" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Tăng Trải Nghiệm Với Hệ Thống Âm Thanh Cao Cấp</h2>
@@ -300,7 +300,7 @@ body {
             <!-- Bài viết 9 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://via.placeholder.com/300x200?text=Bài+9" alt="Bài 9" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/9.jpg') }}" alt="Bài 9" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Lợi Ích Của Việc Đặt Xe Limousine Theo Nhóm</h2>
@@ -313,7 +313,7 @@ body {
             <!-- Bài viết 10 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://via.placeholder.com/300x200?text=Bài+10" alt="Bài 10" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/10.jpg') }}" alt="Bài 10" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Khám Phá Tràng An - Bái Đính Với Limousine</h2>
@@ -326,7 +326,7 @@ body {
             <!-- Bài viết 11 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://via.placeholder.com/300x200?text=Bài+11" alt="Bài 11" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/11.jpg') }}" alt="Bài 11" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Mùa Lễ Hội: Đặt Xe Limousine Sớm Để Tránh Tăng Giá</h2>
@@ -339,7 +339,7 @@ body {
             <!-- Bài viết 12 -->
             <div class="news-card news-card--hidden">
                 <div class="news-card-image-container">
-                    <img src="https://via.placeholder.com/300x200?text=Bài+12" alt="Bài 12" class="news-card-image" loading="lazy">
+                    <img src="{{asset( 'img/12.jpg') }}" alt="Bài 12" class="news-card-image" loading="lazy">
                 </div>
                 <div class="news-card-content">
                     <h2 class="news-card-title mb-2">Trải Nghiệm Tour Nội Thành Hà Nội 1 Ngày</h2>
